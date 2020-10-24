@@ -1,7 +1,7 @@
 Retrosmart X11 cursors
 ----------------------
 
-![retrosmart-preview](https://raw.githubusercontent.com/mdomlop/retrosmart-color-schemes/master/preview.png "Retrosmart color schemes for KDE Plasma")
+![retrosmart-preview](https://github.com/mdomlop/retrosmart-color-schemes/blob/main/preview.png "Retrosmart color schemes for KDE Plasma")
 
 Retrosmart is a color scheme theme created for personal use in KDE plasma
 desktop.
