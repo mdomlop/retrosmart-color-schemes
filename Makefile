@@ -13,9 +13,14 @@ DESTDIR = ''
 
 ARCHPKG = $(EXECUTABLE)-$(VERSION)-1-any.pkg.tar.xz
 
+USERDIR := $(XDG_DATA_HOME)
+ifeq ($(USERDIR),)
+USERDIR := $(HOME)/.local/share/color-schemes
+endif
+
 SRCSCHEMES := $(wildcard src/*.colors)
 SCHEMES := $(addsuffix .colors,$(addprefix $(DESTDIR)$(PREFIX)/share/color-schemes/,$(notdir $(basename $(SRCSCHEMES)))))
-
+USERSCHEMES := $(addsuffix .colors,$(addprefix $(USERDIR)/,$(notdir $(basename $(SRCSCHEMES)))))
 
 install: $(SCHEMES) install_docs
 
@@ -31,6 +36,14 @@ uninstall:
 	rm -f $(PREFIX)/share/licenses/$(EXECUTABLE)
 	rm -f $(PREFIX)/share/doc/$(EXECUTABLE)
 	rm -f $(SCHEMES)
+
+user_install: $(USERSCHEMES)
+
+$(USERDIR)/%.colors: src/%.colors
+	install -Dm 644 $^ $@
+
+user_uninstall:
+	rm -rf $(USERSCHEMES)
 
 opendesktop: $(EXECUTABLE).tar.xz
 
