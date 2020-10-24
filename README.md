@@ -1,5 +1,5 @@
-Retrosmart X11 cursors
-----------------------
+Retrosmart KDE Plasma Color Schemes
+-----------------------------------
 
 ![retrosmart-preview](https://github.com/mdomlop/retrosmart-color-schemes/blob/main/preview.png "Retrosmart color schemes for KDE Plasma")
 
