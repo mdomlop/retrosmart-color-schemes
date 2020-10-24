@@ -39,7 +39,7 @@ or:
 
 or:
 
-    # pacman -Rsc xcursor-retrosmart
+    # pacman -Rsc retrosmart-color-schemes
 
 Dependencies
 ------------
